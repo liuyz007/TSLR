@@ -14,9 +14,8 @@ The folders should be like:
 
 - TSLR 
   - LOLv1
-  - LOLv2
-   - Real_captured
-   - Synthetic
+  - LOLv2 Real_captured
+  - LOLv2 Synthetic
 
 <hr />
 
