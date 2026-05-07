@@ -10,10 +10,12 @@ pip install -r requirements.txt
 Download the LOLV1, LOLv2 datasets, and put them under the TSLR directory.
 The folders should be like:
 
+<hr />
 TSLR
  -LOLv1
  -LOLv2 Real_captured
  -LOLv2 Synthetic
+<hr />
 
 To train, set the options in train.py, and run:
 
