@@ -4,10 +4,13 @@
 This project is built by Python 3.10, CUDA 11.6. For other python package dependencies:
 ```bash
 pip install -r requirements.txt
+```
 
+## Training and Evaluation
 Download the LOLV1, LOLv2 datasets, and put them under the TSLR directory.
 The folders should be like:
 
+<hr />
 Plaintext
 TSLR/
 ├── LOLv1/
@@ -22,12 +25,16 @@ TSLR/
 │   ├── Training data/
 │   └── Eval/
 To train, set the options in train.py, and run:
+<hr />
 
+<hr />
 Bash
 python train.py
 Customizing the Training
 To train on a specific dataset or change hyperparameters, use the command-line arguments:
+<hr />
 
+<hr />
 Bash
 CUDA_VISIBLE_DEVICES=0 python train.py \
     --dataset lolv1 \
@@ -49,8 +56,9 @@ Available Arguments:
 --crop_size: Patch size for training (default: 256).
 
 --save_dir: Directory to save the checkpoints and TensorBoard logs (default: ./result).
+<hr />
 
-**Acknowledgment:**
+## Acknowledgment
 This code is based on the [LYT-Net](https://github.com/albrateanu/LYT-Net) and [Restore-RWKV](https://github.com/Yaziwel/Restore-RWKV).
 
 ## Contact
