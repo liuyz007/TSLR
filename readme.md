@@ -6,28 +6,30 @@ This project is built by Python 3.10, CUDA 11.6. For other python package depend
 pip install -r requirements.txt
 ```
 
-## Training and Evaluation
+## Train
 Download the LOLV1, LOLv2 datasets, and put them under the TSLR directory.
 The folders should be like:
 
 <hr />
-TSLR
- -LOLv1
- -LOLv2 Real_captured
- -LOLv2 Synthetic
+
+- TSLR 
+  - LOLv1
+  - LOLv2
+   - Real_captured
+   - Synthetic
+
 <hr />
+
 
 To train, set the options in train.py, and run:
 
-<hr />
-Bash
+```bash
 python train.py
+```
 Customizing the Training
 To train on a specific dataset or change hyperparameters, use the command-line arguments:
-<hr />
 
-<hr />
-Bash
+```bash
 CUDA_VISIBLE_DEVICES=0 python train.py \
     --dataset lolv1 \
     --data_root /path/to/your/datasets \
@@ -35,9 +37,10 @@ CUDA_VISIBLE_DEVICES=0 python train.py \
     --lr 2e-4 \
     --crop_size 256 \
     --max_iterations 200000
+```
 Available Arguments:
 
---dataset: Choose from ['lolv1', 'lolv2-real', 'lolv2-syn', 'LSRW-Huawei', 'LSRW-Nikon', 'SICE'].
+--dataset: Choose from ['lolv1', 'lolv2-real', 'lolv2-syn'].
 
 --data_root: Path to the directory containing all dataset folders (default is ./).
 
@@ -48,7 +51,7 @@ Available Arguments:
 --crop_size: Patch size for training (default: 256).
 
 --save_dir: Directory to save the checkpoints and TensorBoard logs (default: ./result).
-<hr />
+
 
 ## Acknowledgment
 This code is based on the [LYT-Net](https://github.com/albrateanu/LYT-Net) and [Restore-RWKV](https://github.com/Yaziwel/Restore-RWKV).
